@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity"
+    tools:ignore="MissingDefaultResource">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="@id/vertical_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/vc_pink"
+        android:padding="4dp"
+        app:layout_constraintDimensionRatio="16:9"
+        android:layout_margin="4dp"
+        app:layout_constraintBottom_toBottomOf="@id/horizontal_1"
+        >
+        <ImageView
+            android:id="@+id/iv_weapons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/curved"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="5dp"
+        android:padding="5dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/horizontal_1"
+        app:layout_constraintBottom_toBottomOf="@id/horizontal_2"
+        app:layout_constraintEnd_toEndOf="@id/vertical_1"
+        >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18dp"
+                        android:text="Identity"
+                        />
+
+                    <Spinner
+                        android:id="@+id/sp_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/lout_special"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18dp"
+                        android:text="Feature"
+                        />
+                    <Spinner
+                        android:id="@+id/sp_feature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                    <Button
+                        android:id="@+id/bt_apply"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_button"
+                        android:backgroundTint="#4bbf9c"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:text="Apply"
+                        />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lout_property_holder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:background="@drawable/border"
+        android:padding="4dp"
+        app:layout_constraintBottom_toBottomOf="@id/horizontal_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="4dp"
+        app:layout_constraintStart_toStartOf="@id/vertical_1"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:id="@+id/lout_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:id="@+id/lout_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:text="Properties"
+                    android:textSize="25dp"
+                    >
+                </TextView>
+
+                <LinearLayout
+                    android:id="@+id/child_lout_fType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_fType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/comic_sans"
+                        android:gravity="center"
+                        android:onClick="cOfType"
+                        android:text="Fire type"
+                        android:textSize="16dp" />
+
+                    <Spinner
+                        android:id="@+id/sp_fireType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/child_lout_Range"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_Range"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/comic_sans"
+                        android:gravity="center"
+                        android:onClick="cOfRange"
+                        android:text="Range"
+                        android:textSize="16dp" />
+
+                    <SeekBar
+                        android:id="@+id/sb_range"
+                        android:layout_width="72pt"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/tv_progRange"
+                        android:text="0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/child_lout_AAmmu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_AAmmu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/comic_sans"
+                        android:gravity="center"
+                        android:onClick="cOAAmmu"
+                        android:text="Ammu amount"
+                        android:textSize="16dp" />
+
+                    <SeekBar
+                        android:id="@+id/sb_ammu"
+                        android:layout_width="72pt"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/tv_progAmmu"
+                        android:text="0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/child_lout_Damage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_Damage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/comic_sans"
+                        android:gravity="center"
+                        android:onClick="cODamage"
+                        android:text="Damage"
+                        android:textSize="16dp" />
+
+                    <SeekBar
+                        android:id="@+id/sb_damage"
+                        android:layout_width="72pt"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/tv_progDamage"
+                        android:text="0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lout_btholder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/horizontal_2">
+
+        <Button
+            android:fontFamily="@font/comic_sans"
+            android:id="@+id/bt_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button"
+            android:backgroundTint="#3d8be3"
+            android:text="Save"
+            android:layout_gravity="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <Button
+            android:fontFamily="@font/comic_sans"
+            android:id="@+id/bt_export"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button"
+            android:backgroundTint="#d6586f"
+            android:text="Export"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+
+            />
+        <ImageView
+            android:id="@+id/iv_informations"
+            android:background="@drawable/info"
+            android:layout_width="40dp"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:layout_height="40dp"/>
+
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:layout_margin="4dp"
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:layout_constraintBottom_toBottomOf="@id/horizontal_2"
+        ads:layout_constraintStart_toStartOf="@id/vertical_1"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_adId">
+    </com.google.android.gms.ads.AdView>
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".5"
+
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.50121653" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

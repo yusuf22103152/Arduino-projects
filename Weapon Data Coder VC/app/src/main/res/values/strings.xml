@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">Weapon Data Coder VC</string>
+    <string name="AdApp_id">ca-app-pub-8352956717565499~5051308012</string>
+    <string name="inst_adId">ca-app-pub-8352956717565499/5370000070</string>
+    <string name="banner_adId">ca-app-pub-8352956717565499/2606135749</string>
+    <string name="AdApp_id_test">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="inst_adId_test">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="banner_adId_test">ca-app-pub-3940256099942544/6300978111</string>
+
+    <string name="helpinfo">
+        "\nWeapon data file contains weapon properties and settings. The file is known as \"weapon.dat\" in GTA Vice City
+        \nThe app makes it much easy and simple to edit so you can tweak weapon settings and change vehicle weapon properties, such as damage,range,amount of ammunition per clip etc.\nYou can create your own mod through this tool
+        \nHow to use?
+        \nSelect the weapon Identity you want to modify and edit the weapon properties. Make some changes in properties as you want and click on Save button to save the properties. Don\'t forget to save before selecting another weapon otherwise the changes won\'t be applied
+        \nThere are also some ready-made features you can apply. Select any of the feature and click apply. Click save and this will be applied to the selected weapon. Keep the properties unchanged or don\'t edit to get full effect
+        \nYou can edit a single, multiple or all the weapons one by one
+        \nFeatures explanation :
+        \nExtreme - Powerful weapon with increased damage,range and ammunition capacity
+        \nInability - Causes the weapon make no damage. Apply on weapons used by cop, army and rab to have fun
+        \nClick on export if you are done. It will export a file named \"weapon.dat\" to location Android/data/com.stardrop.wdcsa/files/Exported/weapon.dat
+        \nNow open \"Apk editor\" app and replace the old weapon.dat file with the exported one, rebuild the apk and install. That\'s it, now play
+        \nIf you are using this app for first time, its better checkout a blog showing how to install the mod step by step. Click on "Let me know more" at the end and it will redirect you to the blog.
+        \nTips :
+        \n1. Click on property name to get a little info about them. Remember, all your input values might not support in every weapon property, so the game might crash sometimes. Also some values are constant and might not work at all even if you change, like Melee weapon range is fixed. If you face game crash and don't know which value is causing the game crash then just restart the app and click export, it will export the weapon data file with default values of all property that GTA VC officially use. Now replace the weapon.dat file with exported one
+        \n3. Since each export will overwrite on the same location, so it's better to have a backup of your created mods by changing the file name or keeping it in a safe folder if you don't want to lose
+        \nNote : You can also use the weapon.dat file in GTA Vice City PC edition
+        \nGood news, more tools are coming soon
+        \nIf you have found any bug,glitch or any suggestion, you can inform me. Stay connected with me through Instagram, YouTube\n
+        \nApp version : 1\nVersion code : 210528
+        "
+    </string>
+
+    <string-array name="feature">
+        <item>Extreme</item>
+        <item>Inability</item>
+    </string-array>
+
+
+    <string-array name="name" >
+        <item>Unarmed</item>
+        <item>Brass knuckle</item>
+        <item>Screw driver</item>
+        <item>Golf stick</item>
+        <item>Night stick</item>
+        <item>Knife</item>
+        <item>Baseball bat</item>
+        <item>Hammer</item>
+        <item>Cleaver</item>
+        <item>Machete</item>
+        <item>Katana</item>
+        <item>Chainsaw</item>
+
+        <item>Grenade</item>
+        <item>Detonate grenade</item>
+        <item>Tear gas</item>
+        <item>Molotov</item>
+
+        <item>Colt45</item>
+        <item>Python</item>
+
+        <item>Shotgun</item>
+        <item>Spas 12 Shotgun</item>
+        <item>Stubby Shotgun</item>
+        <item>Tec9</item>
+        <item>Uzi</item>
+        <item>Silenced Ingram</item>
+        <item>Mp5</item>
+        <item>M4</item>
+        <item>Ruger</item>
+        <item>Sniper rifle</item>
+
+        <item>Rocket launcher</item>
+        <item>Flame thrower</item>
+
+        <item>M60</item>
+        <item>Minigun</item>
+
+        <item>Heli canon</item>
+    </string-array>
+
+    <string-array name="fireType">
+        <item>Melee</item>
+        <item>Projectile</item>
+        <item>Instant hit</item>
+        <item>Area effect</item>
+    </string-array>
+
+</resources>

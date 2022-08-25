@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.stardrop.wdcvc">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_wdcvc"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_wdcvc"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.WeaponDataEditorGTAVC">
+        <activity android:name="com.stardrop.wdcvc.InfoActivity"
+            android:screenOrientation="landscape"
+            tools:ignore="Instantiatable">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.stardrop.wdcvc.MainActivity"
+            android:screenOrientation="landscape"
+            tools:ignore="Instantiatable">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.stardrop.wdcvc.splash"
+            android:screenOrientation="landscape"
+            tools:ignore="Instantiatable">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/AdApp_id"/>
+
+
+    </application>
+
+</manifest>
