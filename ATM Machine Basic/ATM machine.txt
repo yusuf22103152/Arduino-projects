@@ -1,0 +1,71 @@
+#include <stdio.h>
+#include <string.h>
+
+void notif() {
+    printf("\nEnter withdraw amount again : \n");
+}
+int main() {
+    
+    int balance=200000;
+    int minimumBalance=5000;
+    char ID[20]="22103116",pass[20]="ZkaHufg";
+    char *IDinp[20],*passInp[20];
+    printf("....Welcome to our ATM service....\n");
+    enterID:
+    printf("\nEnter your ID : ");
+    scanf("%s",&IDinp);
+    if(strcmp(IDinp,ID)==0) {
+        enterPass:
+        printf("Enter password : ");
+        scanf("%s",&passInp);
+        if(strcmp(pass,passInp)==0) {
+            int amount;
+            //Login
+            printf("Login successful...\n");
+            printf("Your current balance is %d Taka\n",balance);
+            enterAmount:
+            printf("Enter withdraw amount : ");
+            scanf("%d",&amount);
+            if (amount>balance) {
+                printf("You don't have sufficiant balance. You have %d Taka in your account",balance);
+                notif();
+                goto enterAmount;
+            }
+            else if(amount>balance-minimumBalance) {
+                printf("You must have at least %d Taka left in your account. You can withdraw amount upto %d Taka",minimumBalance,balance-minimumBalance);
+                notif();
+                
+                goto enterAmount;
+            }
+            else if(amount<1000) {
+                printf("The amount is too less to withdraw. Minimum withdraw amount is 5000 Taka");
+                notif(); 
+                goto enterAmount;
+            }
+            else if (amount>=1000 && amount<=balance-minimumBalance) {
+                printf("Withdraw successful. Your current balance is %d Taka after withdrawing %d Taka",balance-amount,amount);
+                exit(0);
+            }
+            else {
+                printf("Invalid input...");
+                notif();
+                goto enterAmount;
+            }
+        }
+        else {
+            printf("Wrong password. Enter password again\n");
+            goto enterPass;
+        }
+    }
+    else {
+        printf("Wrong ID. Enter ID again\n");
+        goto enterID;
+    }
+    
+    printf("\nEnter your password : ");
+    
+    
+    
+    
+    
+}
