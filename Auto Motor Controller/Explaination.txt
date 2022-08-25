@@ -1,0 +1,29 @@
+   Full form of all variables and Functions
+ErrorCounter: Will count how many times error occured continiously
+Ms:My shield
+cS:count Start
+aOS:alarm On Start
+vT:variable Timer
+oS:on Start
+tH:tank Height
+TP:To Percentage
+wD:water Distance
+sMx:space Maximum
+sMn:space Minimum
+e:echo pin
+t:trigger pin
+b:buzzer
+r:relay
+er:error
+tgd:triggered
+dH:delay High
+dL:delay Low
+c:count
+tB:time Break
+d:duration
+
+aH:alarm High
+aL:alarm Low
+crt:convert
+tS:throw Signal
+O:Operation
